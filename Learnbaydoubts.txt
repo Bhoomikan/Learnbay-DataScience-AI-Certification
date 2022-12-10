@@ -1,0 +1,17 @@
+Doubts learnbay : 
+
+##Write the regular expression and use proper method which Retrieves name starting with 'an' or 'ak'.
+#Output:- ['anil', 'akhil', 'anant', 'ankur']
+import re
+str = 'anil akhil anant abhi arun arati arundhati abhijit ankur'
+
+l=str.split()
+n_l=[]
+for i in l:
+    pattern = r'\b^(an|ak)[A-Z|a-z]+\b'
+    mat=re.search(pattern,i)
+    if mat:
+        n_l.append(mat.group())
+        
+print(n_l)
+why findall isnt working ???
